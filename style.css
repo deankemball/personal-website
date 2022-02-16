@@ -1,0 +1,297 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.root {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: whitesmoke;
+  /* background-color: #161616; */
+  background-color: rgb(42, 0, 0);
+  border: 1px solid hotpink;
+  overscroll-behavior: none;
+  padding: 25px;
+  background-image: url(./images/drips.gif);
+  background-size: cover;
+}
+
+body {
+}
+
+.left-and-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+  padding: 25px;
+}
+
+.carat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0px;
+  width: 0px;
+  opacity: 0;
+  border: 2px dashed red;
+  background-color: rgba(0,0,0,0.75);
+  font-size: 0rem;
+  padding-bottom: 0px;
+  transition: all 0.5s ease;
+}
+
+.carat-popup {
+  font-size: 3rem;
+  padding-bottom: 5px;
+  opacity: 1;
+  height: 75px;
+  width: 75px;
+  transition: all 0.5s ease;
+}
+
+#left-carat:hover, #right-carat:hover {
+  background-color: rgba(255, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  width: 100%;
+  height: 100%;
+  border: 1px hotpink;
+}
+
+.header {
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.deanwallflower {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.6rem;
+  text-align: left;
+  flex-grow: 0;
+  min-width: 375px;
+  height: 100px;
+  max-height: 100px;
+  font-size: 1.6em;
+  border-top: 2px dashed red;
+  border-right: 2px dashed red;
+  border-left: 2px dashed red;
+  background-color: rgba(0,0,0,0.75);
+}
+
+.deanwallflower:hover {
+  background-color: rgba(255, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.deanwallflower > p {
+  margin: 0;
+  padding-left: 25px;
+}
+
+.spacer {
+  display: flex;
+  flex-grow: 1;
+  min-height: 100%;
+  min-width: 125px;
+}
+
+
+.navigation {
+  display: flex;
+  justify-items: space-between;
+  max-width: 375px;
+  border: 2px dashed red;
+  background-color: rgba(0,0,0,0.75)
+}
+
+.navigation-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  max-width: 125px;
+  width: 125px;
+  height: 100px;
+}
+
+#home:hover, #about:hover, #reel:hover {
+  background-color: rgba(255, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+.middle-lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100%;
+}
+
+
+.about-text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  max-width: 375px;
+  min-width: 375px;
+  height: 0; /* animate this property */
+  border-left: 2px dashed red;
+  border-right: 2px dashed red;
+  border-bottom: 2px dashed red;
+  background-color: rgba(0,0,0,0.75);
+  transition: height 0.5s ease;
+}
+
+.about-text-dropdown {
+  height: 500px;
+  transition-delay: border-bottom 0.5s ease;
+}
+
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.about-text p {
+  margin-bottom: 1.6rem;
+}
+
+.spacer2 {
+  display: flex;
+  flex-grow: 1;
+  min-height: 100px;
+}
+
+.contact-form-wrapper-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  height: 100%;
+  max-width: 375px;
+  min-width: 375px;
+}
+
+.contact-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  align-items: space-between;
+  max-width: 375px;
+  min-width: 375px;
+  background-color: rgba(0,0,0,0.75)
+}
+.contact-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-start;
+  min-height: 100px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.75);
+  border-left: 2px dashed red;
+  border-right: 2px dashed red;
+  border-bottom: 2px dashed red;
+}
+
+.contact-button:hover {
+  background-color: rgba(255, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  height: 0px; /* animate this property */
+  overflow: hidden;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  width: 100%;
+  transition: height 0.5s ease;
+  border-top: 2px dashed red;
+  border-right: 2px dashed red;
+  border-left: 2px dashed red;
+  transition: height 0.5s ease;
+}
+
+.contact-form-dropdown {
+  height: 375px;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  transition: height 0.5s ease;
+}
+.contact-form input, label, textarea {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+}
+
+.contact-form input {
+  border: 1px solid red;
+  background-color: rgba(0,0,0,0);
+  
+}
+
+.contact-form textarea {
+  height: 195px;
+  margin-bottom: 10px;
+  border: 1px solid red;
+  background-color: rgba(0,0,0,0);
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-items: space-between;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+#send-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 101%;
+  border-radius: 0px;
+  border: 1px solid red;
+  color: whitesmoke;
+  outline: none;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0);
+}
+
+.turn-red {
+  background-color: rgba(255, 0, 0, 0.25);
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+}
+
+
+
