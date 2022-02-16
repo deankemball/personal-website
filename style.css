@@ -1,27 +1,39 @@
-html, body {
-  height: 100%;
-  width: 100%;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 0, 0, 0); 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.75);
+  border: 1px solid rgba(255, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 0, 0.25);
+}
+* {
+  padding: 0;
   margin: 0;
 }
 
 .root {
   display: flex;
-  height: 100%;
-  width: 100%;
+  height: calc(100vh - 50px);
+  width: calc(100vw - 50px);
   font-family: "Roboto Mono", monospace;
   font-size: 20px;
   letter-spacing: 1px;
   color: whitesmoke;
   /* background-color: #161616; */
   background-color: rgb(42, 0, 0);
-  border: 1px solid hotpink;
   overscroll-behavior: none;
   padding: 25px;
   background-image: url(./images/drips.gif);
   background-size: cover;
-}
-
-body {
 }
 
 .left-and-right {
@@ -130,7 +142,7 @@ body {
   height: 100px;
 }
 
-#home:hover, #about:hover, #reel:hover {
+#home:hover, #about:hover, #reel:hover, #send-button:hover {
   background-color: rgba(255, 0, 0, 0.25);
   cursor: pointer;
   transition: background-color 0.1s ease;
@@ -172,6 +184,7 @@ body {
   width: 100%;
   padding-left: 25px;
   padding-right: 25px;
+  padding-top: 25px;
 }
 
 .about-text p {
@@ -247,6 +260,7 @@ body {
   padding: 0;
   width: 100%;
   font-family: "Roboto Mono", monospace;
+  color: whitesmoke;
   font-size: 20px;
 }
 
@@ -261,6 +275,18 @@ body {
   margin-bottom: 10px;
   border: 1px solid red;
   background-color: rgba(0,0,0,0);
+}
+
+textarea:hover, input:hover {
+  background-color: rgba(255, 0, 0, 0.25);
+  transition: all 0.1s ease;
+}
+
+textarea:focus, input:focus {
+  background-color: rgba(255, 0, 0, 0.25);
+  outline: none;
+  transition: all 0.1s ease;
+
 }
 
 #contact-form {
@@ -285,6 +311,7 @@ body {
   font-family: "Roboto Mono", monospace;
   font-size: 20px;
   background-color: rgba(0,0,0,0);
+  cursor: pointer;
 }
 
 .turn-red {
